@@ -4,7 +4,7 @@ import { Madoka } from 'react-native-textinput-effects';
 import { Font } from 'expo';
 
 const borderColor = '#67eaa2';
-const inputStyle = { color: borderColor};
+const inputStyle = { color: borderColor };
 
 export default class App extends React.Component {
     constructor(props) {
@@ -16,15 +16,15 @@ export default class App extends React.Component {
         // fixes default font arial error
         await Font.loadAsync({
             'Arial': require('./assets/fonts/Arial.ttf')
-        }); 
+        });
 
-        this.setState({ fontLoaded: true }); 
+        this.setState({ fontLoaded: true });
     }
 
     render() {
         return (
             <KeyboardAvoidingView behavior={'padding'} style={styles.container}>
-                {this.state.fontLoaded && 
+                {this.state.fontLoaded &&
                     <Madoka
                         label={'Madoka'}
                         borderColor={borderColor}
