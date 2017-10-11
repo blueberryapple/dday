@@ -1,7 +1,7 @@
 import React from 'react';
-import { KeyboardAvoidingView } from 'react-native';
+import { KeyboardAvoidingView, Button, Modal, FlatList } from 'react-native';
 import { Font } from 'expo';
-import styles from './Styles';
+import styles, {lime} from './Styles';
 import FabsContainer from './Fabs/FabsContainer';
 import ModalPromptContainer from './ModalPrompt/ModalPromptContainer';
 import MessageContainer from './Message/MessageContainer';
@@ -19,7 +19,8 @@ export default class DDay extends React.Component {
     }
 
     render() {
-        let { addPrice, addRate } = this.props;
+        let { addPrice, addRate, bonus, setbacks } = this.props;
+        let summary = false;
         return (
             <KeyboardAvoidingView behavior={'padding'} style={styles.container}>
                 <MessageContainer />

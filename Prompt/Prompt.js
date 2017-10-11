@@ -6,7 +6,6 @@ import styles, { lime } from '../Styles';
 export default function Prompt({ fontLoaded, labels, handlers }) {
     const sharedStyling = {
         borderColor: lime,
-        keyboardType: 'numeric',
         inputStyle: {
             color: lime
         },
@@ -19,6 +18,7 @@ export default function Prompt({ fontLoaded, labels, handlers }) {
                     return (
                         <Madoka
                             {...sharedStyling}
+                            keyboardType={element === 'Name' ? 'default' : 'numeric'}
                             label={element}
                             onChange={(event) => handlers[i](Number(event.nativeEvent.text), element)}
                             key={element} />

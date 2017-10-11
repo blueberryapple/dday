@@ -3,6 +3,7 @@ import {
     Modal,
     View,
     Button,
+    Text,
 } from 'react-native';
 
 import styles from '../Styles';
@@ -15,6 +16,7 @@ export default function ModalPrompt({ toggleModal, buttonPressed, addName, addVa
             onRequestClose={toggleModal}
             visible={modal.open}>
             <View style={styles.container}>
+                <Text style={styles.text}>Add a new {modal.modalType}</Text>
                 <PromptContainer
                     labels={['Name', 'Value']}
                     handlers={[addName, addVal]} />
