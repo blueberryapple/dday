@@ -2,6 +2,13 @@ import { connect } from 'react-redux';
 import DDay from './DDay';
 import { font_loaded, save_input } from './actions';
 
+function mapStateToProps({ bonus, setbacks }) {
+    return {
+        bonus,
+        setbacks
+    }
+}
+
 function mapDispatchToProps(dispatch) {
     return {
         fontLoaded: () => dispatch(font_loaded()),
@@ -10,4 +17,4 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-export default connect(null, mapDispatchToProps)(DDay);
+export default connect(mapStateToProps, mapDispatchToProps)(DDay);

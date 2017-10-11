@@ -30,7 +30,6 @@ function buttonPressedGen(name) {
         switch (action.type) {
             case BUTTON_PRESSED:
                 if (action.modalType === name){
-                    console.log(action.val)
                     return { ...state, [action.name]: action.val }
                 }
             default:

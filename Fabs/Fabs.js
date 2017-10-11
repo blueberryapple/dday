@@ -5,7 +5,7 @@ import styles, { lime, red } from '../Styles';
 
 export default function Fabs({ toggleModal }) {
     const orange = 'rgba(231,76,60,1)';
-    
+
     return (
         <ActionButton buttonColor={orange}>
             <ActionButton.Item buttonColor={lime} title='extra income'>
